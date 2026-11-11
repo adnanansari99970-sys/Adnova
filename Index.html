@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ADNOVA | Brass Products & More</title>
+  <meta name="description" content="ADNOVA - Shop quality brass products, decor, diyas, idols, vases, kitchen items and gifts.">
+
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="logo-area">
+      <div class="logo-box">A</div>
+      <div>
+        <h1>ADNOVA</h1>
+        <span>Quality • Trust • Value</span>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-button" onclick="openCart()">
+      🛒 Cart <span id="cartCount">0</span>
+    </button>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+      <p class="small-title">WELCOME TO ADNOVA</p>
+
+      <h2>Quality Products.<br>
+        <span>Simple Shopping.</span>
+      </h2>
+
+      <p>
+        Discover brass decor, diyas, idols, vases, kitchen products
+        and beautiful gift items.
+      </p>
+
+      <div class="hero-buttons">
+  <a href="#products" class="btn primary">Retail Shopping</a>
+  <a href="#wholesale" class="btn secondary">Wholesale Buying</a>
+</div>
+
+  </section>
+
+
+  <!-- CATEGORIES -->
+  <section class="section" id="categories">
+
+    <div class="section-heading">
+      <p>EXPLORE</p>
+      <h2>Shop By Category</h2>
+    </div>
+
+    <div class="category-grid">
+
+      <button onclick="filterProducts('Brass Decor')">
+        <span>🏺</span>
+        <h3>Brass Decor</h3>
+      </button>
+
+      <button onclick="filterProducts('Brass Diya')">
+        <span>🪔</span>
+        <h3>Brass Diya</h3>
+      </button>
+
+      <button onclick="filterProducts('Brass Idol')">
+        <span>🛕</span>
+        <h3>Brass Idol</h3>
+      </button>
+
+      <button onclick="filterProducts('Brass Vase')">
+        <span>🏺</span>
+        <h3>Brass Vase</h3>
+      </button>
+
+      <button onclick="filterProducts('Kitchen')">
+        <span>🍽️</span>
+        <h3>Kitchen</h3>
+      </button>
+
+      <button onclick="filterProducts('Gift Items')">
+        <span>🎁</span>
+        <h3>Gift Items</h3>
+      </button>
+
+    </div>
+
+  </section>
+  <!-- WHOLESALE -->
+<section class="section wholesale-section" id="wholesale">
+  <div class="section-heading">
+    <p>FOR BULK BUYERS</p>
+    <h2>Wholesale Buying</h2>
+    <p>Buy in bulk for shops, resellers and businesses.</p>
+  </div>
+
+  <div class="wholesale-box">
+    <h3>Bulk Orders</h3>
+    <p>For wholesale quantity and business orders.</p>
+
+    <div class="hero-buttons">
+      <a href="#products" class="btn primary">View Products</a>
+      <a href="#contact" class="btn secondary">Wholesale Enquiry</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- PRODUCTS -->
+  <section class="section products-section" id="products">
+
+    <div class="section-heading">
+      <p>OUR COLLECTION</p>
+      <h2>Featured Products</h2>
+    </div>
+
+    <div class="product-controls">
+
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search products..."
+        oninput="searchProducts()"
+      >
+
+      <select id="categoryFilter" onchange="filterProducts(this.value)">
+        <option value="All">All Categories</option>
+        <option value="Brass Decor">Brass Decor</option>
+        <option value="Brass Diya">Brass Diya</option>
+        <option value="Brass Idol">Brass Idol</option>
+        <option value="Brass Vase">Brass Vase</option>
+        <option value="Kitchen">Kitchen</option>
+        <option value="Gift Items">Gift Items</option>
+      </select>
+
+    </div>
+
+    <div id="productGrid" class="product-grid"></div>
+
+  </section>
+
+
+  <!-- WHY ADNOVA -->
+  <section class="why-section">
+
+    <div class="section-heading">
+      <p>WHY ADNOVA</p>
+      <h2>Made For Simple Shopping</h2>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <span>✓</span>
+        <h3>Quality Products</h3>
+        <p>Products selected with focus on quality and value.</p>
+      </div>
+
+      <div class="why-card">
+        <span>📦</span>
+        <h3>Careful Packing</h3>
+        <p>Products are packed carefully before dispatch.</p>
+      </div>
+
+      <div class="why-card">
+        <span>🚚</span>
+        <h3>Delivery</h3>
+        <p>Delivery options available across India.</p>
+      </div>
+
+      <div class="why-card">
+        <span>💬</span>
+        <h3>Easy Ordering</h3>
+        <p>Place your order easily through WhatsApp.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="section about-section" id="about">
+
+    <div class="about-content">
+
+      <div>
+        <p class="small-title">ABOUT ADNOVA</p>
+        <h2>Your Products, Your Choice.</h2>
+      </div>
+
+      <div>
+        <p>
+          ADNOVA is an online shopping platform focused on bringing
+          quality products directly to customers.
+        </p>
+
+        <p>
+          Our collection includes brass products, home decor,
+          religious items, kitchen products and gift items.
+        </p>
+
+        <p>
+          We aim to make ordering simple, convenient and reliable.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+
+    <div class="section-heading">
+      <p>GET IN TOUCH</p>
+      <h2>Contact ADNOVA</h2>
+      <p class="wholesale-note">
+  For bulk orders, please contact us with product name and required quantity.
+</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <span>📱</span>
+        <h3>WhatsApp</h3>
+        <p>For orders and enquiries</p>
+        <a id="whatsappLink" href="#" target="_blank">
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <span>📧</span>
+        <h3>Email</h3>
+        <p>For business enquiries</p>
+        <a href="mailto:your@email.com">
+          your@email.com
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <span>📍</span>
+        <h3>Location</h3>
+        <p>India</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-logo">
+      <strong>ADNOVA</strong>
+      <p>Quality • Trust • Value</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <p class="copyright">
+      © 2026 ADNOVA. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- CART MODAL -->
+  <div id="cartModal" class="modal">
+
+    <div class="modal-content">
+
+      <button class="close-btn" onclick="closeCart()">×</button>
+
+      <h2>Your Cart</h2>
+
+      <div id="cartItems"></div>
+
+      <div class="cart-total">
+        <strong>Total:</strong>
+        <strong>₹<span id="cartTotal">0</span></strong>
+      </div>
+
+      <button class="checkout-btn" onclick="checkoutWhatsApp()">
+        Order on WhatsApp
+      </button>
+
+      <button class="clear-btn" onclick="clearCart()">
+        Clear Cart
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- PRODUCT DETAILS MODAL -->
+  <div id="productModal" class="modal">
+
+    <div class="modal-content product-detail">
+
+      <button class="close-btn" onclick="closeProduct()">×</button>
+
+      <img id="detailImage" src="" alt="Product">
+
+      <div>
+        <p id="detailCategory"></p>
+        <h2 id="detailName"></h2>
+        <h3>₹<span id="detailPrice"></span></h3>
+
+        <p id="detailDescription"></p>
+
+        <button
+          id="detailAddButton"
+          class="checkout-btn">
+          Add To Cart
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- ADMIN BUTTON -->
+<button class="cart-button" onclick="openAdmin()">
+  + Add Product
+</button>
+
+<!-- ADMIN PANEL -->
+<div id="adminPanel" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeAdmin()">×</button>
+
+    <h2>Add New Product</h2>
+
+    <form id="productForm">
+      <label>Product Name</label>
+      <input type="text" id="newName" placeholder="Enter product name" required>
+
+      <label>Category</label>
+      <select id="newCategory" required>
+        <option value="">Select Category</option>
+        <option value="Brass Decor">Brass Decor</option>
+        <option value="Brass Diya">Brass Diya</option>
+        <option value="Brass Idol">Brass Idol</option>
+        <option value="Brass Vase">Brass Vase</option>
+        <option value="Kitchen">Kitchen</option>
+        <option value="Gift Items">Gift Items</option>
+      </select>
+
+      <label>Price (₹)</label>
+      <input type="number" id="newPrice" placeholder="Enter price" min="1" required>
+
+      <label>Product Image URL</label>
+      <input type="url" id="newImage" placeholder="Paste image URL" required>
+
+      <label>Description</label>
+      <textarea id="newDescription" placeholder="Enter product description" required></textarea>
+
+      <button type="submit" class="checkout-btn">
+        Save Product
+      </button>
+    </form>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
